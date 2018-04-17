@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+}
+.menu {
+    width: 200px;
+    background: #000;
+    height: 100vh;
+}
+.main {
+    flex: 1;
+}
+.menu-logo {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #f9f9f9;
+    font-size: 20px;
+}
+.filter {
+    display: flex;
+    background: lightblue;
+}
+.filter-input {
+    flex: 1;
+}
+.filter-button {
+    background: lightblue;
+}
+.page-top {
+    height: 100px;
+    background: #333;
+}
+.page-menu {
+    width: 20px;
+    height: 20px;
+    background: red;
+}
+.map {
+    width: 100%;
+    height: calc(100vh - 100px);
+}
