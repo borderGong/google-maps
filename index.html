@@ -10,9 +10,12 @@
 		<section class="menu">
 			<h1 class="menu-logo">我的</h1>
 			<div class="filter">
-				<input class="filter-input">
-				<button class="filter-button">filter</button>
+				<input id="filter" class="filter-input">
+				<button data-bind="click: filterItem" class="filter-button">filter</button>
 			</div>
+			<ul class="list" data-bind="foreach: items">
+				<li class="item" data-bind="text: title, click: $parent.clickItem"></li>
+			</ul>
 		</section>
 		<section class="main">
 			<div class="page-top">
