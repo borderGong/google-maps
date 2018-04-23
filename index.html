@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div id="root" class="container">
-		<section class="menu">
+		<section class="menu" data-bind="style: { display: showMenu() ? 'block' : 'none' }">
 			<h1 class="menu-logo">我的</h1>
 			<div class="filter">
 				<input id="filter" class="filter-input">
@@ -19,7 +19,7 @@
 		</section>
 		<section class="main">
 			<div class="page-top">
-				<div class="page-menu"></div>
+				<div data-bind="click: toggleMenu" class="page-menu"></div>
 			</div>
 			<div class="map" id="map"></div>
 		</section>

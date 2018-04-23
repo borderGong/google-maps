@@ -73,6 +73,7 @@ function fetchAddressInfo(lat, lng){
 }
 (function init(){
     const PointerModel = function(items) {
+        this.showMenu = ko.observable(true);
         this.items = ko.observableArray(items);
         this.filterItem = function() {
             const filter = document.querySelector('#filter').value;
@@ -104,6 +105,9 @@ function fetchAddressInfo(lat, lng){
                     infowindow.open(map, item);
                 })
                 .catch(err => console.log(err));
+        }.bind(this);
+        this.toggleMenu = function(){
+            this.showMenu(!this.showMenu());
         }.bind(this);
     };
      
